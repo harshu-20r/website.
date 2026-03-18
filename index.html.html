@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story 💗</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Great+Vibes&display=swap" rel="stylesheet" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'poppins', sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-family: Great Vibes, cursive;
+            font-size: 3.5rem;
+        }
+
+        .heart {
+            font-size: 3rem;
+            animation: heartbeat 1.2s infinite;
+        }
+
+       @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.4); }
+        }
+
+        .section {
+            padding: 50px 20px;
+        }
+
+        .photos img {
+            width: 220px;
+            height: 220px;
+            border-radius: 20px;
+            margin: 10px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s;
+        }
+
+        .photos img:hover {
+            transform: scale(1.15) rotate(2deg);
+        }
+
+        button {
+            background: white;
+            color: #ff4b5c;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .hidden-message {
+            display: none;
+            margin-top: 30px;
+            font-size: 1.4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Floating hearts*/
+        .floating-heart {
+            position: fixed;
+            bottom: -50px;
+            z-index: 9999;
+            pointer-events: none;
+            animation: floatUp  linear forwards;
+        }
+
+        @keyframes floatUp {
+            0% { 
+                transform: translateY(0);
+                opacity: 1; 
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0; }
+        }
+
+
+        footer {
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Happy 8 Month Shadiship Anniversay My Wifey Ji</h1>
+    <div class="heart">💗</div>
+
+    <div class="section">
+        <h2>Our Beautiful Memories 😊📸</h2>
+        <div class="photos">
+            <img src="photo1.jpeg" alt="Memory 1">
+            <img src="photo2.jpeg" alt="Memory 2">
+            <img src="photo3.jpeg" alt="Memory 3">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Click for a Suprise 💌 </h2>
+        <button id="btn">Click Me ❤️</button>
+
+        <div class="hidden-message" id="message">
+            Wifey Ji you are the best gift from the god become my favourite person 😍. Love uhh Soo Much Mera Bacha 😘💕. I will give my every efforts to make smile on your face mera bacha 😊💞. Ek din ese hi sare efforts dal kr aapko m apna bna lunga shadi kr k mera bacha 😘. Is raste m kbhi hath mt chodna aur kbhi piche mt hatna mera bacha 🥺. 
+
+            <br>
+
+            Na jaane kaise itna pyaar ho gaya🥰<br> 
+            Apse milke sab kuch badal sa gaya 💗<br>
+            Ab toh bas ek hi dua hai Bhagwan se 🫶<br>
+            Har janam m bas aap hi mera ho. 😘<br>
+
+            From the moment you came into my life, everything became very very more beautiful. 💖<br><br>
+
+            I promise to stay with you always, support you, and love uhh forever mera bacha. ❤️<br><br>
+        </div>
+    </div>
+
+    <footer>
+        Made with by your Hubby Ji 😊❤️.
+    </footer>
+
+    <audio id="music" src="song.mp3"></audio>
+
+<script>
+    document.getElementById("btn").addEventListener("click", function() {
+
+      document.getElementById("message").style.display = "block";
+
+      document.getElementById("music").play();
+
+      // create floating hearts
+      for (let i = 0; i < 40; i++) {
+
+        let heart = document.createElement("div");
+        heart.innerHTML = "💗";
+        heart.classList.add("floating-heart");
+        
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 20 + 20) + "px";
+        heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+          },    5500);
+    }
+});
+</script>
+
+    
+</body>
+</html>
